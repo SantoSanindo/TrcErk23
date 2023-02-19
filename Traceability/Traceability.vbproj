@@ -94,6 +94,13 @@
       <DependentUpon>HOME.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModbusTCP.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -109,16 +116,64 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ST1 Proccess.Designer.vb">
+      <DependentUpon>ST1 Proccess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ST1 Proccess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST1 Database.Designer.vb">
+      <DependentUpon>ST1 Database.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ST1 Database.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST1 Modbus.Designer.vb">
+      <DependentUpon>ST1 Modbus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ST1 Modbus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST1 Traceability.Designer.vb">
+      <DependentUpon>ST1 Traceability.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ST1 Traceability.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST1 Tracking.Designer.vb">
+      <DependentUpon>ST1 Tracking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ST1 Tracking.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HOME.resx">
       <DependentUpon>HOME.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST1 Database.resx">
+      <DependentUpon>ST1 Database.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST1 Modbus.resx">
+      <DependentUpon>ST1 Modbus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST1 Proccess.resx">
+      <DependentUpon>ST1 Proccess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST1 Traceability.resx">
+      <DependentUpon>ST1 Traceability.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST1 Tracking.resx">
+      <DependentUpon>ST1 Tracking.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -27,11 +27,21 @@ Partial Class HOME
         Me.RibbonButton1 = New System.Windows.Forms.RibbonButton()
         Me.Ribbon1 = New System.Windows.Forms.Ribbon()
         Me.RibbonOrbMenuItem1 = New System.Windows.Forms.RibbonOrbMenuItem()
-        Me.RibbonOrbOptionButton1 = New System.Windows.Forms.RibbonOrbOptionButton()
+        Me.RibbonOrbOptionButtonExit = New System.Windows.Forms.RibbonOrbOptionButton()
         Me.RibbonOrbRecentItem1 = New System.Windows.Forms.RibbonOrbRecentItem()
         Me.RibbonOrbRecentItem2 = New System.Windows.Forms.RibbonOrbRecentItem()
         Me.RibbonOrbRecentItem3 = New System.Windows.Forms.RibbonOrbRecentItem()
         Me.RibbonTab1 = New System.Windows.Forms.RibbonTab()
+        Me.RibbonPanelST1Proccess = New System.Windows.Forms.RibbonPanel()
+        Me.RibbonButtonST1Proccess = New System.Windows.Forms.RibbonButton()
+        Me.RibbonPanelST1Traceability = New System.Windows.Forms.RibbonPanel()
+        Me.RibbonButtonST1Traceability = New System.Windows.Forms.RibbonButton()
+        Me.RibbonPanelST1Tracking = New System.Windows.Forms.RibbonPanel()
+        Me.RibbonButtonST1Tracking = New System.Windows.Forms.RibbonButton()
+        Me.RibbonPanelST1Modbus = New System.Windows.Forms.RibbonPanel()
+        Me.RibbonButtonST1Modbus = New System.Windows.Forms.RibbonButton()
+        Me.RibbonPanelST1Database = New System.Windows.Forms.RibbonPanel()
+        Me.RibbonButtonST1Database = New System.Windows.Forms.RibbonButton()
         Me.RibbonTab2 = New System.Windows.Forms.RibbonTab()
         Me.RibbonTab3 = New System.Windows.Forms.RibbonTab()
         Me.RibbonTab4 = New System.Windows.Forms.RibbonTab()
@@ -43,20 +53,19 @@ Partial Class HOME
         Me.RibbonPanel3 = New System.Windows.Forms.RibbonPanel()
         Me.RibbonButtonST2Settings = New System.Windows.Forms.RibbonButton()
         Me.RibbonPanel4 = New System.Windows.Forms.RibbonPanel()
-        Me.RibbonPanel5 = New System.Windows.Forms.RibbonPanel()
-        Me.RibbonPanel6 = New System.Windows.Forms.RibbonPanel()
-        Me.RibbonButtonST1Traceability = New System.Windows.Forms.RibbonButton()
-        Me.RibbonButtonST1Tracking = New System.Windows.Forms.RibbonButton()
-        Me.RibbonButtonST1Settings = New System.Windows.Forms.RibbonButton()
+        Me.RibbonButtonST1Printer = New System.Windows.Forms.RibbonButton()
         Me.SuspendLayout()
         '
         'TabControl1
         '
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.AutoSize = True
+        Me.TabControl1.Location = New System.Drawing.Point(0, 152)
         Me.TabControl1.MenuRenderer = Nothing
         Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.Size = New System.Drawing.Size(1321, 721)
+        Me.TabControl1.Size = New System.Drawing.Size(1321, 569)
         Me.TabControl1.TabCloseButtonImage = Nothing
         Me.TabControl1.TabCloseButtonImageDisabled = Nothing
         Me.TabControl1.TabCloseButtonImageHot = Nothing
@@ -82,7 +91,7 @@ Partial Class HOME
         Me.Ribbon1.OrbDropDown.Location = New System.Drawing.Point(0, 0)
         Me.Ribbon1.OrbDropDown.MenuItems.Add(Me.RibbonOrbMenuItem1)
         Me.Ribbon1.OrbDropDown.Name = ""
-        Me.Ribbon1.OrbDropDown.OptionItems.Add(Me.RibbonOrbOptionButton1)
+        Me.Ribbon1.OrbDropDown.OptionItems.Add(Me.RibbonOrbOptionButtonExit)
         Me.Ribbon1.OrbDropDown.RecentItems.Add(Me.RibbonOrbRecentItem1)
         Me.Ribbon1.OrbDropDown.RecentItems.Add(Me.RibbonOrbRecentItem2)
         Me.Ribbon1.OrbDropDown.RecentItems.Add(Me.RibbonOrbRecentItem3)
@@ -106,15 +115,15 @@ Partial Class HOME
         Me.RibbonOrbMenuItem1.LargeImage = CType(resources.GetObject("RibbonOrbMenuItem1.LargeImage"), System.Drawing.Image)
         Me.RibbonOrbMenuItem1.Name = "RibbonOrbMenuItem1"
         Me.RibbonOrbMenuItem1.SmallImage = CType(resources.GetObject("RibbonOrbMenuItem1.SmallImage"), System.Drawing.Image)
-        Me.RibbonOrbMenuItem1.Text = "RibbonOrbMenuItem1"
+        Me.RibbonOrbMenuItem1.Text = "Login"
         '
-        'RibbonOrbOptionButton1
+        'RibbonOrbOptionButtonExit
         '
-        Me.RibbonOrbOptionButton1.Image = CType(resources.GetObject("RibbonOrbOptionButton1.Image"), System.Drawing.Image)
-        Me.RibbonOrbOptionButton1.LargeImage = CType(resources.GetObject("RibbonOrbOptionButton1.LargeImage"), System.Drawing.Image)
-        Me.RibbonOrbOptionButton1.Name = "RibbonOrbOptionButton1"
-        Me.RibbonOrbOptionButton1.SmallImage = CType(resources.GetObject("RibbonOrbOptionButton1.SmallImage"), System.Drawing.Image)
-        Me.RibbonOrbOptionButton1.Text = "RibbonOrbOptionButton1"
+        Me.RibbonOrbOptionButtonExit.Image = CType(resources.GetObject("RibbonOrbOptionButtonExit.Image"), System.Drawing.Image)
+        Me.RibbonOrbOptionButtonExit.LargeImage = CType(resources.GetObject("RibbonOrbOptionButtonExit.LargeImage"), System.Drawing.Image)
+        Me.RibbonOrbOptionButtonExit.Name = "RibbonOrbOptionButtonExit"
+        Me.RibbonOrbOptionButtonExit.SmallImage = CType(resources.GetObject("RibbonOrbOptionButtonExit.SmallImage"), System.Drawing.Image)
+        Me.RibbonOrbOptionButtonExit.Text = "Exit"
         '
         'RibbonOrbRecentItem1
         '
@@ -143,10 +152,78 @@ Partial Class HOME
         'RibbonTab1
         '
         Me.RibbonTab1.Name = "RibbonTab1"
+        Me.RibbonTab1.Panels.Add(Me.RibbonPanelST1Proccess)
+        Me.RibbonTab1.Panels.Add(Me.RibbonPanelST1Traceability)
+        Me.RibbonTab1.Panels.Add(Me.RibbonPanelST1Tracking)
+        Me.RibbonTab1.Panels.Add(Me.RibbonPanelST1Modbus)
+        Me.RibbonTab1.Panels.Add(Me.RibbonPanelST1Database)
         Me.RibbonTab1.Panels.Add(Me.RibbonPanel4)
-        Me.RibbonTab1.Panels.Add(Me.RibbonPanel5)
-        Me.RibbonTab1.Panels.Add(Me.RibbonPanel6)
         Me.RibbonTab1.Text = "Station 1"
+        '
+        'RibbonPanelST1Proccess
+        '
+        Me.RibbonPanelST1Proccess.Items.Add(Me.RibbonButtonST1Proccess)
+        Me.RibbonPanelST1Proccess.Name = "RibbonPanelST1Proccess"
+        Me.RibbonPanelST1Proccess.Text = "Proccess"
+        '
+        'RibbonButtonST1Proccess
+        '
+        Me.RibbonButtonST1Proccess.Image = CType(resources.GetObject("RibbonButtonST1Proccess.Image"), System.Drawing.Image)
+        Me.RibbonButtonST1Proccess.LargeImage = CType(resources.GetObject("RibbonButtonST1Proccess.LargeImage"), System.Drawing.Image)
+        Me.RibbonButtonST1Proccess.Name = "RibbonButtonST1Proccess"
+        Me.RibbonButtonST1Proccess.SmallImage = CType(resources.GetObject("RibbonButtonST1Proccess.SmallImage"), System.Drawing.Image)
+        '
+        'RibbonPanelST1Traceability
+        '
+        Me.RibbonPanelST1Traceability.Items.Add(Me.RibbonButtonST1Traceability)
+        Me.RibbonPanelST1Traceability.Name = "RibbonPanelST1Traceability"
+        Me.RibbonPanelST1Traceability.Text = "Traceability"
+        '
+        'RibbonButtonST1Traceability
+        '
+        Me.RibbonButtonST1Traceability.Image = CType(resources.GetObject("RibbonButtonST1Traceability.Image"), System.Drawing.Image)
+        Me.RibbonButtonST1Traceability.LargeImage = CType(resources.GetObject("RibbonButtonST1Traceability.LargeImage"), System.Drawing.Image)
+        Me.RibbonButtonST1Traceability.Name = "RibbonButtonST1Traceability"
+        Me.RibbonButtonST1Traceability.SmallImage = CType(resources.GetObject("RibbonButtonST1Traceability.SmallImage"), System.Drawing.Image)
+        '
+        'RibbonPanelST1Tracking
+        '
+        Me.RibbonPanelST1Tracking.Items.Add(Me.RibbonButtonST1Tracking)
+        Me.RibbonPanelST1Tracking.Name = "RibbonPanelST1Tracking"
+        Me.RibbonPanelST1Tracking.Text = "Tracking"
+        '
+        'RibbonButtonST1Tracking
+        '
+        Me.RibbonButtonST1Tracking.Image = CType(resources.GetObject("RibbonButtonST1Tracking.Image"), System.Drawing.Image)
+        Me.RibbonButtonST1Tracking.LargeImage = CType(resources.GetObject("RibbonButtonST1Tracking.LargeImage"), System.Drawing.Image)
+        Me.RibbonButtonST1Tracking.Name = "RibbonButtonST1Tracking"
+        Me.RibbonButtonST1Tracking.SmallImage = CType(resources.GetObject("RibbonButtonST1Tracking.SmallImage"), System.Drawing.Image)
+        '
+        'RibbonPanelST1Modbus
+        '
+        Me.RibbonPanelST1Modbus.Items.Add(Me.RibbonButtonST1Modbus)
+        Me.RibbonPanelST1Modbus.Name = "RibbonPanelST1Modbus"
+        Me.RibbonPanelST1Modbus.Text = "Modbus"
+        '
+        'RibbonButtonST1Modbus
+        '
+        Me.RibbonButtonST1Modbus.Image = CType(resources.GetObject("RibbonButtonST1Modbus.Image"), System.Drawing.Image)
+        Me.RibbonButtonST1Modbus.LargeImage = CType(resources.GetObject("RibbonButtonST1Modbus.LargeImage"), System.Drawing.Image)
+        Me.RibbonButtonST1Modbus.Name = "RibbonButtonST1Modbus"
+        Me.RibbonButtonST1Modbus.SmallImage = CType(resources.GetObject("RibbonButtonST1Modbus.SmallImage"), System.Drawing.Image)
+        '
+        'RibbonPanelST1Database
+        '
+        Me.RibbonPanelST1Database.Items.Add(Me.RibbonButtonST1Database)
+        Me.RibbonPanelST1Database.Name = "RibbonPanelST1Database"
+        Me.RibbonPanelST1Database.Text = "Batabase"
+        '
+        'RibbonButtonST1Database
+        '
+        Me.RibbonButtonST1Database.Image = CType(resources.GetObject("RibbonButtonST1Database.Image"), System.Drawing.Image)
+        Me.RibbonButtonST1Database.LargeImage = CType(resources.GetObject("RibbonButtonST1Database.LargeImage"), System.Drawing.Image)
+        Me.RibbonButtonST1Database.Name = "RibbonButtonST1Database"
+        Me.RibbonButtonST1Database.SmallImage = CType(resources.GetObject("RibbonButtonST1Database.SmallImage"), System.Drawing.Image)
         '
         'RibbonTab2
         '
@@ -212,42 +289,16 @@ Partial Class HOME
         '
         'RibbonPanel4
         '
-        Me.RibbonPanel4.Items.Add(Me.RibbonButtonST1Traceability)
+        Me.RibbonPanel4.Items.Add(Me.RibbonButtonST1Printer)
         Me.RibbonPanel4.Name = "RibbonPanel4"
-        Me.RibbonPanel4.Text = "Traceability"
+        Me.RibbonPanel4.Text = "Printer"
         '
-        'RibbonPanel5
+        'RibbonButtonST1Printer
         '
-        Me.RibbonPanel5.Items.Add(Me.RibbonButtonST1Tracking)
-        Me.RibbonPanel5.Name = "RibbonPanel5"
-        Me.RibbonPanel5.Text = "Tracking"
-        '
-        'RibbonPanel6
-        '
-        Me.RibbonPanel6.Items.Add(Me.RibbonButtonST1Settings)
-        Me.RibbonPanel6.Name = "RibbonPanel6"
-        Me.RibbonPanel6.Text = "Settings"
-        '
-        'RibbonButtonST1Traceability
-        '
-        Me.RibbonButtonST1Traceability.Image = CType(resources.GetObject("RibbonButtonST1Traceability.Image"), System.Drawing.Image)
-        Me.RibbonButtonST1Traceability.LargeImage = CType(resources.GetObject("RibbonButtonST1Traceability.LargeImage"), System.Drawing.Image)
-        Me.RibbonButtonST1Traceability.Name = "RibbonButtonST1Traceability"
-        Me.RibbonButtonST1Traceability.SmallImage = CType(resources.GetObject("RibbonButtonST1Traceability.SmallImage"), System.Drawing.Image)
-        '
-        'RibbonButtonST1Tracking
-        '
-        Me.RibbonButtonST1Tracking.Image = CType(resources.GetObject("RibbonButtonST1Tracking.Image"), System.Drawing.Image)
-        Me.RibbonButtonST1Tracking.LargeImage = CType(resources.GetObject("RibbonButtonST1Tracking.LargeImage"), System.Drawing.Image)
-        Me.RibbonButtonST1Tracking.Name = "RibbonButtonST1Tracking"
-        Me.RibbonButtonST1Tracking.SmallImage = CType(resources.GetObject("RibbonButtonST1Tracking.SmallImage"), System.Drawing.Image)
-        '
-        'RibbonButtonST1Settings
-        '
-        Me.RibbonButtonST1Settings.Image = CType(resources.GetObject("RibbonButtonST1Settings.Image"), System.Drawing.Image)
-        Me.RibbonButtonST1Settings.LargeImage = CType(resources.GetObject("RibbonButtonST1Settings.LargeImage"), System.Drawing.Image)
-        Me.RibbonButtonST1Settings.Name = "RibbonButtonST1Settings"
-        Me.RibbonButtonST1Settings.SmallImage = CType(resources.GetObject("RibbonButtonST1Settings.SmallImage"), System.Drawing.Image)
+        Me.RibbonButtonST1Printer.Image = CType(resources.GetObject("RibbonButtonST1Printer.Image"), System.Drawing.Image)
+        Me.RibbonButtonST1Printer.LargeImage = CType(resources.GetObject("RibbonButtonST1Printer.LargeImage"), System.Drawing.Image)
+        Me.RibbonButtonST1Printer.Name = "RibbonButtonST1Printer"
+        Me.RibbonButtonST1Printer.SmallImage = CType(resources.GetObject("RibbonButtonST1Printer.SmallImage"), System.Drawing.Image)
         '
         'HOME
         '
@@ -261,13 +312,14 @@ Partial Class HOME
         Me.Text = "Traceability"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TabControl1 As MdiTabControl.TabControl
     Friend WithEvents RibbonButton1 As RibbonButton
     Friend WithEvents Ribbon1 As Ribbon
     Friend WithEvents RibbonOrbMenuItem1 As RibbonOrbMenuItem
-    Friend WithEvents RibbonOrbOptionButton1 As RibbonOrbOptionButton
+    Friend WithEvents RibbonOrbOptionButtonExit As RibbonOrbOptionButton
     Friend WithEvents RibbonOrbRecentItem1 As RibbonOrbRecentItem
     Friend WithEvents RibbonOrbRecentItem2 As RibbonOrbRecentItem
     Friend WithEvents RibbonOrbRecentItem3 As RibbonOrbRecentItem
@@ -282,10 +334,17 @@ Partial Class HOME
     Friend WithEvents RibbonButtonST1Track As RibbonButton
     Friend WithEvents RibbonPanel3 As RibbonPanel
     Friend WithEvents RibbonButtonST2Settings As RibbonButton
-    Friend WithEvents RibbonPanel4 As RibbonPanel
+    Friend WithEvents RibbonPanelST1Traceability As RibbonPanel
     Friend WithEvents RibbonButtonST1Traceability As RibbonButton
-    Friend WithEvents RibbonPanel5 As RibbonPanel
+    Friend WithEvents RibbonPanelST1Tracking As RibbonPanel
     Friend WithEvents RibbonPanel6 As RibbonPanel
     Friend WithEvents RibbonButtonST1Tracking As RibbonButton
-    Friend WithEvents RibbonButtonST1Settings As RibbonButton
+    Friend WithEvents RibbonPanelST1Modbus As RibbonPanel
+    Friend WithEvents RibbonButtonST1Modbus As RibbonButton
+    Friend WithEvents RibbonPanelST1Database As RibbonPanel
+    Friend WithEvents RibbonButtonST1Database As RibbonButton
+    Friend WithEvents RibbonPanelST1Proccess As RibbonPanel
+    Friend WithEvents RibbonButtonST1Proccess As RibbonButton
+    Friend WithEvents RibbonPanel4 As RibbonPanel
+    Friend WithEvents RibbonButtonST1Printer As RibbonButton
 End Class
