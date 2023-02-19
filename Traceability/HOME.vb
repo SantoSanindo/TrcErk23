@@ -34,6 +34,13 @@
     End Sub
 
     Private Sub HOME_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TabControl1.TabPages.Add(ST1_Tracking_Form)
+        TabControl1.TabPages.Add(ST1_Modbus_Form)
+        TabControl1.TabPages.Add(ST1_Proccess_form)
+        TabControl1.TabPages.Add(ST1_Traceability_Form)
+        TabControl1.TabPages.Add(ST1_Database_form)
+        TabControl1.TabPages.Add(Login_Form)
+        TabControl1.TabPages.Clear()
 
     End Sub
 
