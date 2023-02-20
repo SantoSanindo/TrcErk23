@@ -54,6 +54,7 @@ Partial Class HOME
         Me.RibbonButtonST1Track = New System.Windows.Forms.RibbonButton()
         Me.RibbonPanel3 = New System.Windows.Forms.RibbonPanel()
         Me.RibbonButtonST2Settings = New System.Windows.Forms.RibbonButton()
+        Me.RibbonTab6 = New System.Windows.Forms.RibbonTab()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -105,6 +106,7 @@ Partial Class HOME
         Me.Ribbon1.Tabs.Add(Me.RibbonTab3)
         Me.Ribbon1.Tabs.Add(Me.RibbonTab4)
         Me.Ribbon1.Tabs.Add(Me.RibbonTab5)
+        Me.Ribbon1.Tabs.Add(Me.RibbonTab6)
         Me.Ribbon1.TabsMargin = New System.Windows.Forms.Padding(12, 26, 20, 0)
         Me.Ribbon1.Text = "Ribbon1"
         '
@@ -300,6 +302,11 @@ Partial Class HOME
         Me.RibbonButtonST2Settings.Name = "RibbonButtonST2Settings"
         Me.RibbonButtonST2Settings.SmallImage = CType(resources.GetObject("RibbonButtonST2Settings.SmallImage"), System.Drawing.Image)
         '
+        'RibbonTab6
+        '
+        Me.RibbonTab6.Name = "RibbonTab6"
+        Me.RibbonTab6.Text = "Station 6"
+        '
         'HOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -348,4 +355,5 @@ Partial Class HOME
     Friend WithEvents RibbonButtonST1Proccess As RibbonButton
     Friend WithEvents RibbonPanel4 As RibbonPanel
     Friend WithEvents RibbonButtonST1Printer As RibbonButton
+    Friend WithEvents RibbonTab6 As RibbonTab
 End Class
