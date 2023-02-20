@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ST1_Modbus_Form
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,10 @@ Partial Class ST1_Modbus_Form
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.txtIP = New System.Windows.Forms.TextBox()
-        Me.label4 = New System.Windows.Forms.Label()
-        Me.txtUnit = New System.Windows.Forms.TextBox()
-        Me.btnWriteMultipleReg = New System.Windows.Forms.Button()
+        Me.btnWriteReg = New System.Windows.Forms.Button()
         Me.btnWriteMultipleCoils = New System.Windows.Forms.Button()
         Me.btnWriteSingleReg = New System.Windows.Forms.Button()
         Me.grpExchange = New System.Windows.Forms.GroupBox()
@@ -48,8 +46,6 @@ Partial Class ST1_Modbus_Form
         Me.DGV_Read = New System.Windows.Forms.DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.clm_No = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.clm_Data = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpExchange.SuspendLayout()
         Me.grpStart.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -66,34 +62,17 @@ Partial Class ST1_Modbus_Form
         Me.txtIP.Text = "127.0.0.1"
         Me.txtIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'label4
+        'btnWriteReg
         '
-        Me.label4.Location = New System.Drawing.Point(13, 27)
-        Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(74, 14)
-        Me.label4.TabIndex = 25
-        Me.label4.Text = "Unit"
-        '
-        'txtUnit
-        '
-        Me.txtUnit.Location = New System.Drawing.Point(87, 25)
-        Me.txtUnit.Name = "txtUnit"
-        Me.txtUnit.Size = New System.Drawing.Size(50, 20)
-        Me.txtUnit.TabIndex = 24
-        Me.txtUnit.Text = "0"
-        Me.txtUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'btnWriteMultipleReg
-        '
-        Me.btnWriteMultipleReg.Location = New System.Drawing.Point(573, 76)
-        Me.btnWriteMultipleReg.Name = "btnWriteMultipleReg"
-        Me.btnWriteMultipleReg.Size = New System.Drawing.Size(87, 35)
-        Me.btnWriteMultipleReg.TabIndex = 23
-        Me.btnWriteMultipleReg.Text = "Write multiple register"
+        Me.btnWriteReg.Location = New System.Drawing.Point(573, 27)
+        Me.btnWriteReg.Name = "btnWriteReg"
+        Me.btnWriteReg.Size = New System.Drawing.Size(87, 35)
+        Me.btnWriteReg.TabIndex = 23
+        Me.btnWriteReg.Text = "Write  single register"
         '
         'btnWriteMultipleCoils
         '
-        Me.btnWriteMultipleCoils.Location = New System.Drawing.Point(573, 28)
+        Me.btnWriteMultipleCoils.Location = New System.Drawing.Point(573, 76)
         Me.btnWriteMultipleCoils.Name = "btnWriteMultipleCoils"
         Me.btnWriteMultipleCoils.Size = New System.Drawing.Size(87, 34)
         Me.btnWriteMultipleCoils.TabIndex = 22
@@ -112,9 +91,7 @@ Partial Class ST1_Modbus_Form
         Me.grpExchange.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpExchange.Controls.Add(Me.txt_Data_Write)
-        Me.grpExchange.Controls.Add(Me.label4)
-        Me.grpExchange.Controls.Add(Me.txtUnit)
-        Me.grpExchange.Controls.Add(Me.btnWriteMultipleReg)
+        Me.grpExchange.Controls.Add(Me.btnWriteReg)
         Me.grpExchange.Controls.Add(Me.btnWriteMultipleCoils)
         Me.grpExchange.Controls.Add(Me.btnWriteSingleReg)
         Me.grpExchange.Controls.Add(Me.btnWriteSingleCoil)
@@ -169,7 +146,7 @@ Partial Class ST1_Modbus_Form
         '
         'label3
         '
-        Me.label3.Location = New System.Drawing.Point(13, 78)
+        Me.label3.Location = New System.Drawing.Point(19, 54)
         Me.label3.Name = "label3"
         Me.label3.Size = New System.Drawing.Size(74, 14)
         Me.label3.TabIndex = 15
@@ -177,16 +154,16 @@ Partial Class ST1_Modbus_Form
         '
         'txtSize
         '
-        Me.txtSize.Location = New System.Drawing.Point(87, 78)
+        Me.txtSize.Location = New System.Drawing.Point(93, 54)
         Me.txtSize.Name = "txtSize"
         Me.txtSize.Size = New System.Drawing.Size(50, 20)
         Me.txtSize.TabIndex = 14
-        Me.txtSize.Text = "32"
+        Me.txtSize.Text = "1"
         Me.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'label2
         '
-        Me.label2.Location = New System.Drawing.Point(13, 53)
+        Me.label2.Location = New System.Drawing.Point(19, 29)
         Me.label2.Name = "label2"
         Me.label2.Size = New System.Drawing.Size(74, 14)
         Me.label2.TabIndex = 13
@@ -194,7 +171,7 @@ Partial Class ST1_Modbus_Form
         '
         'txtStartAdress
         '
-        Me.txtStartAdress.Location = New System.Drawing.Point(87, 51)
+        Me.txtStartAdress.Location = New System.Drawing.Point(93, 27)
         Me.txtStartAdress.Name = "txtStartAdress"
         Me.txtStartAdress.Size = New System.Drawing.Size(50, 20)
         Me.txtStartAdress.TabIndex = 12
@@ -281,7 +258,6 @@ Partial Class ST1_Modbus_Form
         'DGV_Read
         '
         Me.DGV_Read.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_Read.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clm_No, Me.clm_Data})
         Me.DGV_Read.Location = New System.Drawing.Point(320, 44)
         Me.DGV_Read.Name = "DGV_Read"
         Me.DGV_Read.ReadOnly = True
@@ -303,18 +279,6 @@ Partial Class ST1_Modbus_Form
         Me.Label7.Size = New System.Drawing.Size(74, 14)
         Me.Label7.TabIndex = 15
         Me.Label7.Text = "Read Data"
-        '
-        'clm_No
-        '
-        Me.clm_No.HeaderText = "No"
-        Me.clm_No.Name = "clm_No"
-        Me.clm_No.ReadOnly = True
-        '
-        'clm_Data
-        '
-        Me.clm_Data.HeaderText = "Data MW"
-        Me.clm_Data.Name = "clm_Data"
-        Me.clm_Data.ReadOnly = True
         '
         'ST1_Modbus_Form
         '
@@ -338,9 +302,7 @@ Partial Class ST1_Modbus_Form
     End Sub
 
     Private WithEvents txtIP As TextBox
-    Private WithEvents label4 As Label
-    Private WithEvents txtUnit As TextBox
-    Private WithEvents btnWriteMultipleReg As Button
+    Private WithEvents btnWriteReg As Button
     Private WithEvents btnWriteMultipleCoils As Button
     Private WithEvents btnWriteSingleReg As Button
     Private WithEvents grpExchange As GroupBox
@@ -363,6 +325,4 @@ Partial Class ST1_Modbus_Form
     Friend WithEvents DGV_Write As DataGridView
     Private WithEvents Label7 As Label
     Private WithEvents Label6 As Label
-    Friend WithEvents clm_No As DataGridViewTextBoxColumn
-    Friend WithEvents clm_Data As DataGridViewTextBoxColumn
 End Class

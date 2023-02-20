@@ -42,6 +42,8 @@ Partial Class HOME
         Me.RibbonButtonST1Modbus = New System.Windows.Forms.RibbonButton()
         Me.RibbonPanelST1Database = New System.Windows.Forms.RibbonPanel()
         Me.RibbonButtonST1Database = New System.Windows.Forms.RibbonButton()
+        Me.RibbonPanel4 = New System.Windows.Forms.RibbonPanel()
+        Me.RibbonButtonST1Printer = New System.Windows.Forms.RibbonButton()
         Me.RibbonTab2 = New System.Windows.Forms.RibbonTab()
         Me.RibbonTab3 = New System.Windows.Forms.RibbonTab()
         Me.RibbonTab4 = New System.Windows.Forms.RibbonTab()
@@ -52,8 +54,6 @@ Partial Class HOME
         Me.RibbonButtonST1Track = New System.Windows.Forms.RibbonButton()
         Me.RibbonPanel3 = New System.Windows.Forms.RibbonPanel()
         Me.RibbonButtonST2Settings = New System.Windows.Forms.RibbonButton()
-        Me.RibbonPanel4 = New System.Windows.Forms.RibbonPanel()
-        Me.RibbonButtonST1Printer = New System.Windows.Forms.RibbonButton()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -225,6 +225,19 @@ Partial Class HOME
         Me.RibbonButtonST1Database.Name = "RibbonButtonST1Database"
         Me.RibbonButtonST1Database.SmallImage = CType(resources.GetObject("RibbonButtonST1Database.SmallImage"), System.Drawing.Image)
         '
+        'RibbonPanel4
+        '
+        Me.RibbonPanel4.Items.Add(Me.RibbonButtonST1Printer)
+        Me.RibbonPanel4.Name = "RibbonPanel4"
+        Me.RibbonPanel4.Text = "Printer"
+        '
+        'RibbonButtonST1Printer
+        '
+        Me.RibbonButtonST1Printer.Image = CType(resources.GetObject("RibbonButtonST1Printer.Image"), System.Drawing.Image)
+        Me.RibbonButtonST1Printer.LargeImage = CType(resources.GetObject("RibbonButtonST1Printer.LargeImage"), System.Drawing.Image)
+        Me.RibbonButtonST1Printer.Name = "RibbonButtonST1Printer"
+        Me.RibbonButtonST1Printer.SmallImage = CType(resources.GetObject("RibbonButtonST1Printer.SmallImage"), System.Drawing.Image)
+        '
         'RibbonTab2
         '
         Me.RibbonTab2.Name = "RibbonTab2"
@@ -287,19 +300,6 @@ Partial Class HOME
         Me.RibbonButtonST2Settings.Name = "RibbonButtonST2Settings"
         Me.RibbonButtonST2Settings.SmallImage = CType(resources.GetObject("RibbonButtonST2Settings.SmallImage"), System.Drawing.Image)
         '
-        'RibbonPanel4
-        '
-        Me.RibbonPanel4.Items.Add(Me.RibbonButtonST1Printer)
-        Me.RibbonPanel4.Name = "RibbonPanel4"
-        Me.RibbonPanel4.Text = "Printer"
-        '
-        'RibbonButtonST1Printer
-        '
-        Me.RibbonButtonST1Printer.Image = CType(resources.GetObject("RibbonButtonST1Printer.Image"), System.Drawing.Image)
-        Me.RibbonButtonST1Printer.LargeImage = CType(resources.GetObject("RibbonButtonST1Printer.LargeImage"), System.Drawing.Image)
-        Me.RibbonButtonST1Printer.Name = "RibbonButtonST1Printer"
-        Me.RibbonButtonST1Printer.SmallImage = CType(resources.GetObject("RibbonButtonST1Printer.SmallImage"), System.Drawing.Image)
-        '
         'HOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -307,6 +307,7 @@ Partial Class HOME
         Me.ClientSize = New System.Drawing.Size(1321, 721)
         Me.Controls.Add(Me.Ribbon1)
         Me.Controls.Add(Me.TabControl1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.Name = "HOME"
         Me.Text = "Traceability"

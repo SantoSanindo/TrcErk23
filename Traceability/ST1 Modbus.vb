@@ -20,14 +20,21 @@ Public Class ST1_Modbus_Form
 
     Private Sub btnReadHoldReg_Click(sender As Object, e As EventArgs) Handles btnReadHoldReg.Click
         Dim readHoldingRegister() As Integer = modbusClient.ReadHoldingRegisters(txtStartAdress.Text, txtSize.Text)
-        Dim index As Integer = 0
+        Dim start_addrs As Integer = Convert.ToDecimal(txtStartAdress.Text)
+        'Dim myArray(,) As Integer
 
-        ' Mengkonversi array integer menjadi objek anonim dengan dua properti "Data" dan "Kuadrat"
-        Dim data = readHoldingRegister.Select(Function(x) New With {.Data = x, .Kuadrat = x * x}).ToList()
-        DGV_Read.DataSource = data
-        ' Menentukan nama kolom
-        DGV_Read.Columns("clm_No").HeaderText = "Address MW"
-        DGV_Read.Columns("clm_Data").HeaderText = "Data"
+        Dim dt As New DataTable()
+        dt.Columns.Add("AddresMW")
+        dt.Columns.Add("Data")
 
+        For i As Integer = 0 To readHoldingRegister.Length - 1
+            dt.Rows.Add(i + start_addrs, readHoldingRegister(i))
+        Next
+        DGV_Read.DataSource = dt
+
+    End Sub
+
+    Private Sub btnWriteReg_Click(sender As Object, e As EventArgs) Handles btnWriteReg.Click
+        modbusClient.WriteSingleRegister(txtStartAdress.Text, txt_Data_Write.Text)
     End Sub
 End Class
