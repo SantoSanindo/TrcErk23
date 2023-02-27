@@ -55,6 +55,7 @@ Partial Class HOME
         Me.RibbonPanel3 = New System.Windows.Forms.RibbonPanel()
         Me.RibbonButtonST2Settings = New System.Windows.Forms.RibbonButton()
         Me.RibbonTab6 = New System.Windows.Forms.RibbonTab()
+        Me.RibbonUpDown1 = New System.Windows.Forms.RibbonUpDown()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -218,7 +219,7 @@ Partial Class HOME
         '
         Me.RibbonPanelST1Database.Items.Add(Me.RibbonButtonST1Database)
         Me.RibbonPanelST1Database.Name = "RibbonPanelST1Database"
-        Me.RibbonPanelST1Database.Text = "Batabase"
+        Me.RibbonPanelST1Database.Text = "Database"
         '
         'RibbonButtonST1Database
         '
@@ -307,6 +308,12 @@ Partial Class HOME
         Me.RibbonTab6.Name = "RibbonTab6"
         Me.RibbonTab6.Text = "Station 6"
         '
+        'RibbonUpDown1
+        '
+        Me.RibbonUpDown1.Name = "RibbonUpDown1"
+        Me.RibbonUpDown1.TextBoxText = ""
+        Me.RibbonUpDown1.TextBoxWidth = 50
+        '
         'HOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -356,4 +363,5 @@ Partial Class HOME
     Friend WithEvents RibbonPanel4 As RibbonPanel
     Friend WithEvents RibbonButtonST1Printer As RibbonButton
     Friend WithEvents RibbonTab6 As RibbonTab
+    Friend WithEvents RibbonUpDown1 As RibbonUpDown
 End Class
