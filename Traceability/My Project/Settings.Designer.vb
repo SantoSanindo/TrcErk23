@@ -53,6 +53,26 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-27VJVUPP;Initial Catalog=DB_tcer23;Integrated Security=True")>  _
+        Public ReadOnly Property DB_tcer23ConnectionString() As String
+            Get
+                Return CType(Me("DB_tcer23ConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-27VJVUPP\SQLEXPRESS;Initial Catalog=tcer23;User ID=tcer23")>  _
+        Public ReadOnly Property tcer23() As String
+            Get
+                Return CType(Me("tcer23"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

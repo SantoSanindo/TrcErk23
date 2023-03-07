@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class ST1_Proccess_form
+Partial Class ST1_Printer_Form
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,28 +22,15 @@ Partial Class ST1_Proccess_form
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-
         Me.SuspendLayout()
         '
-        'DB_tcer23DataSet
-        '
-        '
-        'Tbl_trcer23BindingSource
-        '
-        '
-        'Tbl_trcer23TableAdapter
-        '
-        '
-        'TableAdapterManager
-        '
-        '
-        'ST1_Proccess_form
+        'ST1_Printer_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Name = "ST1_Proccess_form"
-        Me.Text = "ST1_Proccess_form"
+        Me.Name = "ST1_Printer_Form"
+        Me.Text = "ST1_Printer"
         Me.ResumeLayout(False)
 
     End Sub

@@ -57,6 +57,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -91,6 +94,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseConnection.vb" />
     <Compile Include="HOME.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +123,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ST1 Printer.Designer.vb">
+      <DependentUpon>ST1 Printer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ST1 Printer.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ST1 Proccess.Designer.vb">
       <DependentUpon>ST1 Proccess.vb</DependentUpon>
@@ -150,6 +160,11 @@
     <Compile Include="ST1 Tracking.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="tcer23DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tcer23DataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HOME.resx">
@@ -169,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ST1 Modbus.resx">
       <DependentUpon>ST1 Modbus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST1 Printer.resx">
+      <DependentUpon>ST1 Printer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ST1 Proccess.resx">
       <DependentUpon>ST1 Proccess.vb</DependentUpon>
@@ -192,8 +210,28 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="tcer23DataSet.xsc">
+      <DependentUpon>tcer23DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tcer23DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tcer23DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tcer23DataSet.xss">
+      <DependentUpon>tcer23DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\settings.png" />
+    <None Include="Resources\process.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\database-storage.png" />
+    <None Include="Resources\rj45.png" />
+    <None Include="Resources\tracking.png" />
+    <None Include="Resources\traceability.png" />
+    <None Include="Resources\settings1.png" />
     <Content Include="sanindo.ico" />
   </ItemGroup>
   <ItemGroup>

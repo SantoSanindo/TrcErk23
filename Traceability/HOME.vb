@@ -49,4 +49,9 @@
         TabControl1.TabPages.Clear()
         TabControl1.TabPages.Add(ST1_Modbus_Form)
     End Sub
+
+    Private Sub ST1_Printer(sender As Object, e As EventArgs) Handles RibbonButtonST1Printer.Click
+        TabControl1.TabPages.Clear()
+        TabControl1.TabPages.Add(ST1_Printer_Form)
+    End Sub
 End Class
